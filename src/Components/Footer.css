@@ -1,0 +1,121 @@
+.footer-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 100px 8%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif; /* Google Font */
+  border-top: 1px solid #fff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+/* Left Side Styling */
+.footer-left {
+  flex: 1.5;
+  min-width: 320px;
+}
+
+.footer-main-title {
+  font-size: clamp(100px, 80vw, 90px);
+  line-height: 0.95;
+  font-weight: 650;
+  margin-bottom: 20px;
+}
+
+.italic-serif {
+  font-family: 'Playfair Display', serif; /* CDN Serif Font */
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(40px, 30vw, 80px);
+}
+
+.footer-sub-title {
+  font-size: 40px;
+  color: #ff04de;
+}
+
+/* Right Side Styling */
+.footer-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.footer-email a {
+  color: #adff2f; /* Neon Green */
+  font-size: clamp(20px, 3vw, 30px);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  font-weight: 500;
+}
+
+.footer-social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.social-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.3s;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+}
+
+.social-link i {
+  font-size: 20px;
+}
+
+/* Newsletter Section */
+.footer-newsletter h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: #888;
+  padding: 12px 0;
+  width: 100%;
+  max-width: 320px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 60px 5%;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-main-title {
+    font-size: 45px;
+  }
+}

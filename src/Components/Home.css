@@ -1,0 +1,115 @@
+/* Container jo content ko center karega */
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-wrapper {
+  background-color: black; /* Black Background */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  
+
+}
+
+
+
+.home-content {
+  text-align: center;
+  width: 90%; /* Taaki sides se chipke nahi */
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column; /* Sabko ek ke niche ek lane ke liye */
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Arial Black', sans-serif; /* Bold font ke liye */
+  text-transform: uppercase;
+ margin-top: 100px;
+}
+
+/* 1st Line: WEB DEVELOPER */
+.web-text {
+
+  font-size: 6.8vw; /* Bada size */
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+/* 2nd Line: & Symbol */
+.ampersand {
+  font-size: 5vw;
+  margin: 10px 0;
+  font-weight: 400;
+  
+}
+
+/* 3rd Line: UI/UX DESIGNER */
+.ui-ux-animated {
+  font-size: 5vw; /* Web text se thoda chota */
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1px;
+  
+ 
+}
+
+/* Responsive adjustment for Tablets & Mobile */
+@media (max-width: 768px) {
+  .web-text {
+    font-size: 11vw; /* Mobile par readability ke liye thoda bada */
+  }
+  .ui-ux-animated {
+    font-size: 8vw;
+  }
+  .ampersand {
+    font-size: 10vw;
+  }
+}
+
+
+
+
+.resume-container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.resume-btn{
+  margin-top: 50px;
+  padding: 12px 28px;
+  background-color: aquamarine;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.resume-btn:hover{
+ box-shadow: 0 0 15px #82CD47;
+ transform: scale(1.05);
+}
+
+@keyframes mobe {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+

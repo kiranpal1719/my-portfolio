@@ -1,0 +1,120 @@
+/* Google Font for extra bold look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%; /* Thoda zyada padding premium look ke liye */
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+  border-bottom: 1px solid #d406ab; /* Patli si line niche */
+}
+
+/* Logo Section */
+.logo {
+  font-size: clamp(1.8rem, 6vw, 2.8rem); /* Bada logo jo screen ke sath chota ho jaye */
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Desktop Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 60px; /* Links ke beech mast gap */
+}
+
+.nav-links li a {
+  color: #2fff00;
+  text-decoration: none;
+  font-size: 1.4rem; /* Kaafi bada aur saaf text */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+/* Hover Effect - Color change aur Underline animation */
+.nav-links li a:hover {
+  color: #fff;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: -8px;
+  left: 0;
+  background-color: #fff; /* White line on hover */
+  transition: 0.4s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Icon for Mobile */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* --- MOBILE RESPONSIVE LOGIC --- */
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Shuruat mein screen ke bahar */
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: 0.5s ease-in-out;
+  }
+
+  /* Jab menu open ho (JavaScript se 'open' class aayegi) */
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li a {
+    font-size: 3.5rem; /* Mobile screen par ekdum bada text! */
+    color: #fff;
+  }
+}

@@ -1,0 +1,97 @@
+/* 1. Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Page Styling */
+.stack-page {
+  background-color: #000000;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Sab kuch horizontally center */
+  justify-content: center; /* Sab kuch vertically center */
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #fff;
+  
+}
+
+/* 3. Header "MY STACK" */
+.header-text {
+  font-size: 100px;
+  font-weight: 670;
+  width: 100%;
+  max-width: 800px;
+  text-align: left; /* Image mein ye left mein tha */
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 4. "FRONTEND" Bold Text */
+.frontend-text {
+  font-size: clamp(90px, 50vw, 90px);
+  font-weight: 800;
+  color: #39FF14; /* Neon Green */
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+
+/* 5. Center Grid for Icons */
+.skill-grid {
+  display: grid;
+  /* 2 columns, barabar jagah */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 50px 80px; /* Pehla value: upar-neeche ka gap, Doosra: side-side ka gap */
+  width: auto;
+  max-width: 600px;
+
+  
+}
+
+/* 6. Individual Skill Row */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Icon aur Text ke beech ka gap */
+}
+
+/* 7. Icon size */
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-left: 30px;
+}
+
+/* 8. Skill Name */
+.skill-name {
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* 9. Mobile Responsive */
+@media (max-width: 600px) {
+  .header-text {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .skill-grid {
+    grid-template-columns: 1fr; /* Mobile par ek ke neeche ek */
+    gap: 30px;
+  }
+
+  .frontend-text {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+}
