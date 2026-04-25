@@ -1,10 +1,10 @@
-/* Container jo content ko center karega */
+
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home-wrapper {
-  background-color: black; /* Black Background */
+  background-color: black; 
   height: 100vh;
   width: 100%;
   display: flex;
@@ -20,29 +20,47 @@
 
 .home-content {
   text-align: center;
-  width: 90%; /* Taaki sides se chipke nahi */
+  width: 90%;
 }
 
 .hero-title {
   display: flex;
-  flex-direction: column; /* Sabko ek ke niche ek lane ke liye */
+  flex-direction: column; 
   align-items: center;
   color: #ffffff;
-  font-family: 'Arial Black', sans-serif; /* Bold font ke liye */
+  font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
  margin-top: 100px;
 }
 
-/* 1st Line: WEB DEVELOPER */
+
 .web-text {
 
-  font-size: 6.8vw; /* Bada size */
+  font-size: 6.8vw;
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -2px;
 }
 
-/* 2nd Line: & Symbol */
+.dev-text {
+  background: linear-gradient(270deg, #ff1493, #e1ff21); 
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: pinkShift 4s ease infinite;
+}
+
+
+
+@keyframes pinkShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
 .ampersand {
   font-size: 5vw;
   margin: 10px 0;
@@ -50,23 +68,41 @@
   
 }
 
-/* 3rd Line: UI/UX DESIGNER */
+
 .ui-ux-animated {
-  font-size: 5vw; /* Web text se thoda chota */
+  font-size: 5vw; 
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -1px;
-  
+   color: white;
+     -webkit-text-fill-color: white;
  
 }
 
-/* Responsive adjustment for Tablets & Mobile */
+.ui-ux-text {
+  font-size: 5vw;            
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -1px;
+
+  background: linear-gradient(270deg, #de08fa, #02d9d2); 
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: pinkShift 4s ease infinite;
+}
+
+
 @media (max-width: 768px) {
   .web-text {
-    font-size: 11vw; /* Mobile par readability ke liye thoda bada */
+    font-size: 11vw; 
   }
   .ui-ux-animated {
     font-size: 8vw;
+  }
+  .ui-ux-text {
+    font-size: 8vw;   
   }
   .ampersand {
     font-size: 10vw;

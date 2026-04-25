@@ -1,5 +1,7 @@
 import React from 'react';
 import './Skills.css';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Skills = () => {
   const skills = [
@@ -8,6 +10,27 @@ const Skills = () => {
     { name: 'HTML5', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
     { name: 'CSS3', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
   ];
+
+useGSAP(() => {
+  const tl = gsap.timeline();
+
+  tl.from(".header-text", {
+    y: -80,
+    opacity: 0,
+    duration: 1.8
+  })
+  .from(".frontend-text", {
+    y: -50,
+    opacity: 0,
+    duration: 1.6
+  })
+  .from(".skill-item", {
+    y: 120,
+    opacity: 0,
+    duration: 1.5,
+    stagger: 0.6
+  });
+}, []);
 
   return (
     <div className="stack-page">

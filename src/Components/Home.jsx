@@ -6,9 +6,11 @@ const Home = () => {
     <div className="home-wrapper">
       <div className="home-content">
         <h1 className="hero-title">
-          <span className="web-text">WEB DEVELOPER</span>
+          <span className="web-text">WEB <span className="dev-text">DEVELOPER</span>
+          </span>
           <span className="ampersand">&</span>
-          <span className="ui-ux-animated">UI/UX DESIGNER</span>
+          <span className="ui-ux-text">UI/UX <span className="ui-ux-animated">DESIGNER</span>
+          </span>
         </h1>
 
 
