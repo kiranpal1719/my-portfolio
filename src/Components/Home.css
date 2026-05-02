@@ -5,15 +5,13 @@
 
 .home-wrapper {
   background-color: black; 
-  height: 100vh;
+  min-height: 100vh; /* height ki jagah min-height */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  overflow: hidden;
-  
-
+ 
 }
 
 
@@ -30,13 +28,58 @@
   color: #ffffff;
   font-family: 'Arial Black', sans-serif;
   text-transform: uppercase;
- margin-top: 100px;
+
+}
+
+
+/* Profile Section */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 170px;
+}
+
+.profile-image {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #04ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 15px;
+  font-size: 3vw;
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+font-family: 'Playfair Display', serif;
+}
+
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .profile-name {
+    font-size: 7vw;
+  }
 }
 
 
 .web-text {
 
-  font-size: 6.8vw;
+  font-size: 6vw;
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -2px;
@@ -70,7 +113,7 @@
 
 
 .ui-ux-animated {
-  font-size: 5vw; 
+  font-size: 4vw; 
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -1px;
@@ -80,7 +123,7 @@
 }
 
 .ui-ux-text {
-  font-size: 5vw;            
+  font-size: 4vw;            
   font-weight: 600;
   line-height: 0.9;
   letter-spacing: -1px;
@@ -116,11 +159,13 @@
   margin-top: 30px;
   display: flex;
   justify-content: center;
+  padding-bottom: 60px;
 
 }
 
 .resume-btn{
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 70px;
   padding: 12px 28px;
   background-color: aquamarine;
   color: #000;
@@ -130,7 +175,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 
@@ -145,6 +190,19 @@
   }
   100%{
     transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .resume-container {
+    margin-top: 0px; /* Laptop mein 30px tha, mobile pe 0 kar diya taaki upar jaye */
+    padding-bottom: 90px; /* Mobile par bottom space bhi thoda kam kar diya */
+  }
+
+  .resume-btn {
+    margin-top: 0px; /* Button ka apna upar ka margin hata diya */
+    margin-bottom: 20px; /* Neeche ka margin bhi adjust kar diya */
   }
 }
 
